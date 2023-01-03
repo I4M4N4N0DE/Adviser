@@ -21,15 +21,21 @@ def advise(): # the basic adviser function
             print("")
             
             while True:
-                repChoice = input("Restart? [Y/N]")
+            
+                repChoice = input("Restart? [Y/N]" 
+                                + "\n" + "Menu[1]")
                 if repChoice == "Y":
-                    advise()
+                    break
                 elif repChoice == "N":
                     quit()
+                elif repChoice == "1":
+                    main()
                 else:
                     print("Didn't understand - again: ")
+                    break
         else:
-            print(Fore.RED + "That wasn't a question - again: ")           
+            print(Fore.RED + "That wasn't a question - again: ")   
+            break        
         
 def confession(): # the confessing function
     
@@ -77,13 +83,19 @@ def confession(): # the confessing function
             print("Having cold and calmed brain is most important.")
             
             while True:
-                repChoice = input("Restart? [Y/N]")
+            
+                repChoice = input("Restart? [Y/N]" 
+                                + "\n" + "Menu[1]")
                 if repChoice == "Y":
-                    confession()
+                    break
                 elif repChoice == "N":
                     quit()
+                elif repChoice == "1":
+                    main()
                 else:
                     print("Didn't understand - again: ")
+                    break
+                
         else:
             print(Fore.LIGHTGREEN_EX + ok)
             print("")
@@ -92,13 +104,18 @@ def confession(): # the confessing function
             print("If you're happy with it, there's no reason for solving anything :).")
        
             while True:
-                repChoice = input("Restart? [Y/N]")
+            
+                repChoice = input("Restart? [Y/N]" 
+                                + "\n" + "Menu[1]")
                 if repChoice == "Y":
-                    confession()
+                    break
                 elif repChoice == "N":
                     quit()
+                elif repChoice == "1":
+                    main()
                 else:
-                    print(Fore.RED + "Didn't understand - again: ")
+                    print("Didn't understand - again: ")
+                    break
 
 # welcomming function choosing the working mode
 def main():

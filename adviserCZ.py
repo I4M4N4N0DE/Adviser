@@ -21,15 +21,21 @@ def porada(): # funkce jednoduchého poradce
             print("")
             
             while True:
-                repChoice = input("Restartovat? [A/N]")
+            
+                repChoice = input("Restartovat? [A/N]" 
+                                + "\n" + "Menu[1]: ")
                 if repChoice == "A":
-                    porada()
+                    break
                 elif repChoice == "N":
                     quit()
+                elif repChoice == "1":
+                    main()
                 else:
                     print("Nerozumím - znovu: ")
+                    break
         else:
-            print(Fore.RED + "To nebyla otázka, znovu prosím: ")           
+            print(Fore.RED + "To nebyla otázka, znovu prosím: ")  
+            break         
         
 def zpoved(): # funkce zpovědnice
     
@@ -41,7 +47,7 @@ def zpoved(): # funkce zpovědnice
                         (__)\       )\/
                             ||----w |
                             ||     ||
-                              Z          """
+                                       """
         
     notok = """ ___________ 
               < NENÍ TO OK. >
@@ -77,7 +83,12 @@ def zpoved(): # funkce zpovědnice
                 "Krvácí", "krvácí", "napadat", "Napadat",
                 "ukraden", "Ukraden", "ukradena", "Ukradena",
                 "okrást", "Okrást", "okraden", "Okraden",
-                "Okradena", "okrZdena"]
+                "Okradena", "Vystřelil", "vystřelil", "vystřelila,"
+                "Vystřelila", "vystřelilo", "Vystřelilo", "vystřelily",
+                "Vystřelily", "vystřelili", "Vystřelili", "zavraždil"
+                "Zavraždil", "zavraždili", "Zavraždili", "zavraždila",
+                "Zavraždila", "zavraždily", "Zavraždily", "zabil", 
+                "Zabil", "zabili", "Zabili", "zabily", "Zabily"]
     
     # funkční část
     while True:
@@ -91,13 +102,19 @@ def zpoved(): # funkce zpovědnice
             print("Důležitá je chladná hlava, ale jednej, protože to je třeba vyřešit.")
             
             while True:
-                repChoice = input("Restartovat? [A/N]")
+            
+                repChoice = input("Restartovat? [A/N]" 
+                                + "\n" + "Menu[1]")
                 if repChoice == "A":
-                    zpoved()
+                    break
                 elif repChoice == "N":
                     quit()
+                elif repChoice == "1":
+                    main()
                 else:
                     print("Nerozumím - znovu: ")
+                    break
+        
         else:
             print(Fore.LIGHTGREEN_EX + ok)
             print("")
@@ -106,13 +123,18 @@ def zpoved(): # funkce zpovědnice
             print("Pokud jsi spokojen, není co řešit :).")
             
             while True:
-                repChoice = input("Restartovat? [A/N]")
+            
+                repChoice = input("Restartovat? [A/N]" 
+                                + "\n" + "Menu[1]")
                 if repChoice == "A":
-                    zpoved()
+                    break
                 elif repChoice == "N":
                     quit()
+                elif repChoice == "1":
+                    main()
                 else:
                     print("Nerozumím - znovu: ")
+                    break
 
 # úvodní funkce volící pracovní režim
 def main():
